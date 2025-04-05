@@ -1,0 +1,148 @@
+/* Základní stylování pro celé tělo stránky */
+body {
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hlavička */
+header {
+    background-color: #ffffffaa;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #003366;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-style: italic;
+}
+
+/* Navigace */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+}
+
+/* O nás sekce */
+.about {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffffcc;
+    border-radius: 10px;
+}
+
+.about p {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* News sekce */
+#news {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+article h3 {
+    margin-bottom: 5px;
+    color: #006699;
+}
+
+/* Aside */
+aside {
+    background-color: #e0e0e0;
+    padding: 15px;
+    margin: 20px auto;
+    width: 80%;
+    font-style: italic;
+    border-left: 5px solid #888;
+}
+
+/* Contact sekce */
+#contact {
+    background-color: #ffffffcc;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+address {
+    font-style: normal;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+/* Info box v pravém horním rohu */
+.info-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fffae6;
+    border: 1px solid #ffd700;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    max-width: 300px;
+    font-size: 0.9em;
+}
+
+/* Tabulka zákroků */
+#procedures {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffffcc;
+    border-radius: 10px;
+}
+
+#procedures table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#procedures th,
+#procedures td {
+    border: 1px solid #aaa;
+    padding: 10px;
+    text-align: center;
+}
+
+#procedures th {
+    background-color: #003366;
+    color: white;
+}
+
+#procedures td {
+    background-color: #f0f8ff;
+}
