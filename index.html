@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/MedicalOrganization">
 <head>
+    <!-- Metadata and head configuration -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReverseClinic - Cosmetic Reversal</title>
+    <meta name="description" content="ReverseClinic - Embrace the beauty of normality with our unique medical procedures.">
+    <meta name="author" content="ReverseClinic s.r.o.">
+    <meta name="keywords" content="reverse clinic, cosmetic reversal, downgrade beauty, funny clinic">
+    <title itemprop="name">ReverseClinic - Cosmetic Reversal</title>
+    <meta itemprop="description" content="A satirical health provider specializing in unique procedures that embrace imperfection.">
+    <meta itemprop="url" content="https://www.reverseclinic.cz">
+    <meta itemprop="logo" content="images/logo.png">
+    <meta itemprop="email" content="info@reverseclinic.cz">
+    <meta itemprop="telephone" content="+420696420696">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Website Header -->
     <header>
-        <h1 style="color:blue"><strong>ReverseClinic</strong></h1>
+        <h1 style="color:blue" itemprop="name"><strong>ReverseClinic</strong></h1>
         <p style="font-family: Arial, Helvetica, sans-serif;"> <i>Reversal, Redefined!</i></p>
-        
+
+        <!-- Navigation bar -->
         <nav>
             <ul>
                 <li><a href="#about">Who we are</a></li>
@@ -21,9 +32,8 @@
             </ul>
         </nav>
     </header>
-    
 
-    <!-- Who we are -->
+    <!-- About Section -->
     <section id="about" class="about">
         <h2>Who we are</h2>
         <p>Welcome to <strong>Reverse Clinic</strong>, the world’s first medical center dedicated to bringing you back to reality! While others chase perfection, we believe in embracing the <strong>beauty of normality</strong>.</p>
@@ -33,47 +43,49 @@
             <p><em>“I came in perfect. I left human.” – a happy patient</em></p>
         </aside>
     </section>
-<!-- Informační okno v pravém horním rohu -->
-<div class="info-box">
-    <p><strong>🩺 Hot news!</strong> We are accepting new patients for a reverse facelift - add wrinkles before they become fashionable again!</p>
-</div>
 
-<!-- Tabulka zákroků -->
-<section id="procedures">
-    <h2>Our Procedures & Pricing</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Procedure</th>
-                <th>Price (Professional)</th>
-                <th>Price (Intern)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Penis Reduction</td>
-                <td>8,900 CZK</td>
-                <td>3,990 CZK</td>
-            </tr>
-            <tr>
-                <td>Wrinkle Restoration</td>
-                <td>6,500 CZK</td>
-                <td>2,700 CZK</td>
-            </tr>
-            <tr>
-                <td>Reverse Liposuction</td>
-                <td>11,200 CZK</td>
-                <td>5,100 CZK</td>
-            </tr>
-            <tr>
-                <td>Acne Revival</td>
-                <td>4,000 CZK</td>
-                <td>1,800 CZK</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-    <!-- News section -->
+    <!-- Info box in top right corner -->
+    <div class="info-box">
+        <p><strong>🩺 Hot news!</strong> We are accepting new patients for a reverse facelift - add wrinkles before they become fashionable again!</p>
+    </div>
+
+    <!-- Procedures and Pricing Table -->
+    <section id="procedures" itemscope itemtype="https://schema.org/OfferCatalog">
+        <h2>Our Procedures & Pricing</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Procedure</th>
+                    <th>Price (Professional)</th>
+                    <th>Price (Intern)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                    <td itemprop="name">Penis Reduction</td>
+                    <td itemprop="price">8,900 CZK</td>
+                    <td>3,990 CZK</td>
+                </tr>
+                <tr itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                    <td itemprop="name">Wrinkle Restoration</td>
+                    <td itemprop="price">6,500 CZK</td>
+                    <td>2,700 CZK</td>
+                </tr>
+                <tr itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                    <td itemprop="name">Reverse Liposuction</td>
+                    <td itemprop="price">11,200 CZK</td>
+                    <td>5,100 CZK</td>
+                </tr>
+                <tr itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                    <td itemprop="name">Acne Revival</td>
+                    <td itemprop="price">4,000 CZK</td>
+                    <td>1,800 CZK</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- News Section -->
     <section id="news">
         <h2>News</h2>
         <article>
@@ -90,17 +102,17 @@
         </article>
     </section>
 
-    <!-- Contact section -->
-    <section id="contact">
+    <!-- Contact Section -->
+    <section id="contact" itemscope itemtype="https://schema.org/PostalAddress">
         <h2>Contact Us</h2>
         <address>
-            ReverseClinic s.r.o.<br>
-            U Srázného 13<br>
-            696 69 Dolní Sebereflexy<br>
-            Česká republika<br>
-            Tel: <a href="tel:+420696420696">+420 696 420 696</a><br>
-            E-mail: <a href="mailto:info@reverseclinic.cz">info@reverseclinic.cz</a>
-        </address>        
+            <span itemprop="name">ReverseClinic s.r.o.</span><br>
+            <span itemprop="streetAddress">U Srázného 13</span><br>
+            <span itemprop="postalCode">696 69</span> <span itemprop="addressLocality">Dolní Sebereflexy</span><br>
+            <span itemprop="addressCountry">Czech Republic</span><br>
+            Tel: <a href="tel:+420696420696" itemprop="telephone">+420 696 420 696</a><br>
+            E-mail: <a href="mailto:info@reverseclinic.cz" itemprop="email">info@reverseclinic.cz</a>
+        </address>
         <p>Opening hours: Mon–Fri <time datetime="09:00">09:00</time> – <time datetime="17:00">17:00</time></p>
     </section>
 
@@ -114,7 +126,7 @@
         </ul>
     </aside>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 ReverseClinic. All rights reversed.</p>
     </footer>
