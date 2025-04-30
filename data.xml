@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<klinika xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+  <oddeleni kod="INT" typ="interni" patro="2" otevreno="true">
+    <nazevOddeleni>Interna</nazevOddeleni>
+    <adresaOddeleni>Nemocnicni 12, Brno</adresaOddeleni>
+    <kapacitaLuzek>45</kapacitaLuzek>
+    <lekar id="L001" smluvni="true">
+      <titul>MUDr.</titul>
+      <jmeno>Eva</jmeno>
+      <prijmeni>Novotna</prijmeni>
+      <specializace>Kardiologie</specializace>
+      <email>eva.novotna@klinika.cz</email>
+      <telefon>123456789</telefon>
+    </lekar>
+    <!-- 5 pacientu s ruznymi zaznamy -->
+    
+<pacient id="P001" stav="aktivni" rizikovy="false" pojisten="true">
+  <jmeno>Jan</jmeno>
+  <prijmeni>Novak</prijmeni>
+  <rodneCislo>850101/1234</rodneCislo>
+  <datumNarozeni>1985-01-01</datumNarozeni>
+  <pohlavi>M</pohlavi>
+  <pojistovna>111</pojistovna>
+  <statniPrislusnost>Ceska republika</statniPrislusnost>
+  <telefon>+420123456P001</telefon>
+  <email>jan.novak@email.cz</email>
+  <adresa>Ulice 1, Mesto</adresa>
+  <kontaktniOsoba>Anna Novakova</kontaktniOsoba>
+  <alergie>Penicilin</alergie>
+  <zaznamy>
+    <zaznam>
+      <typ>navsteva</typ>
+      <datum>2025-03-01</datum>
+      <cas>09:30</cas>
+      <diagnoza>J45</diagnoza>
+      <ukon>Penis Reduction</ukon>
+      <lekarId>L001</lekarId>
+      <oddeleniKod>INT</oddeleniKod>
+      <poznamka>dusnost</poznamka>
+      <hospitalizace>false</hospitalizace>
+      <predpis>Ventolin</predpis>
+    </zaznam>
+  </zaznamy>
+</pacient>
+
+
+<pacient id="P002" stav="propusten" rizikovy="false" pojisten="true">
+  <jmeno>Petra</jmeno>
+  <prijmeni>Dvorakova</prijmeni>
+  <rodneCislo>900202/4567</rodneCislo>
+  <datumNarozeni>1990-02-02</datumNarozeni>
+  <pohlavi>F</pohlavi>
+  <pojistovna>205</pojistovna>
+  <statniPrislusnost>Ceska republika</statniPrislusnost>
+  <telefon>+420123456P002</telefon>
+  <email>petra@email.cz</email>
+  <adresa>Ulice 2, Mesto</adresa>
+  <kontaktniOsoba>Jan Dvorak</kontaktniOsoba>
+  <alergie>Zadne</alergie>
+  <zaznamy>
+    <zaznam>
+      <typ>kontrola</typ>
+      <datum>2025-03-05</datum>
+      <cas>10:15</cas>
+      <diagnoza>Z09</diagnoza>
+      <ukon>Wrinkle Restoration</ukon>
+      <lekarId>L001</lekarId>
+      <oddeleniKod>INT</oddeleniKod>
+      <poznamka>v poradku</poznamka>
+      <hospitalizace>false</hospitalizace>
+      <predpis>---</predpis>
+    </zaznam>
+  </zaznamy>
+</pacient>
+
+
+<pacient id="P003" stav="hospitalizovan" rizikovy="true" pojisten="false">
+  <jmeno>Lukas</jmeno>
+  <prijmeni>Krejci</prijmeni>
+  <rodneCislo>920303/7890</rodneCislo>
+  <datumNarozeni>1992-03-03</datumNarozeni>
+  <pohlavi>M</pohlavi>
+  <pojistovna>213</pojistovna>
+  <statniPrislusnost>Ceska republika</statniPrislusnost>
+  <telefon>+420123456P003</telefon>
+  <email>lukas@email.cz</email>
+  <adresa>Ulice 3, Mesto</adresa>
+  <kontaktniOsoba>Alena Krejci</kontaktniOsoba>
+  <alergie>Vceli bodnuti</alergie>
+  <zaznamy>
+    <zaznam>
+      <typ>vysetreni</typ>
+      <datum>2025-03-10</datum>
+      <cas>11:00</cas>
+      <diagnoza>R51</diagnoza>
+      <ukon>Reverse Liposuction</ukon>
+      <lekarId>L001</lekarId>
+      <oddeleniKod>INT</oddeleniKod>
+      <poznamka>bolest hlavy</poznamka>
+      <hospitalizace>true</hospitalizace>
+      <predpis>Paralen</predpis>
+    </zaznam>
+  </zaznamy>
+</pacient>
+
+
+<pacient id="P004" stav="aktivni" rizikovy="true" pojisten="true">
+  <jmeno>Martina</jmeno>
+  <prijmeni>Benesova</prijmeni>
+  <rodneCislo>880404/2345</rodneCislo>
+  <datumNarozeni>1988-04-04</datumNarozeni>
+  <pohlavi>F</pohlavi>
+  <pojistovna>111</pojistovna>
+  <statniPrislusnost>Ceska republika</statniPrislusnost>
+  <telefon>+420123456P004</telefon>
+  <email>martina@email.cz</email>
+  <adresa>Ulice 4, Mesto</adresa>
+  <kontaktniOsoba>Eva Benesova</kontaktniOsoba>
+  <alergie>Gluten</alergie>
+  <zaznamy>
+    <zaznam>
+      <typ>konzultace</typ>
+      <datum>2025-03-12</datum>
+      <cas>14:00</cas>
+      <diagnoza>E66</diagnoza>
+      <ukon>Acne Revival</ukon>
+      <lekarId>L001</lekarId>
+      <oddeleniKod>INT</oddeleniKod>
+      <poznamka>nadvaha</poznamka>
+      <hospitalizace>false</hospitalizace>
+      <predpis>Doporuceni</predpis>
+    </zaznam>
+  </zaznamy>
+</pacient>
+
+
+<pacient id="P005" stav="ceka" rizikovy="false" pojisten="false">
+  <jmeno>Tomas</jmeno>
+  <prijmeni>Svoboda</prijmeni>
+  <rodneCislo>950505/6789</rodneCislo>
+  <datumNarozeni>1995-05-05</datumNarozeni>
+  <pohlavi>M</pohlavi>
+  <pojistovna>207</pojistovna>
+  <statniPrislusnost>Ceska republika</statniPrislusnost>
+  <telefon>+420123456P005</telefon>
+  <email>tomas@email.cz</email>
+  <adresa>Ulice 5, Mesto</adresa>
+  <kontaktniOsoba>Karel Svoboda</kontaktniOsoba>
+  <alergie>Laktoza</alergie>
+  <zaznamy>
+    <zaznam>
+      <typ>navsteva</typ>
+      <datum>2025-03-20</datum>
+      <cas>08:00</cas>
+      <diagnoza>K21</diagnoza>
+      <ukon>Wrinkle Restoration</ukon>
+      <lekarId>L001</lekarId>
+      <oddeleniKod>INT</oddeleniKod>
+      <poznamka>nevolnost</poznamka>
+      <hospitalizace>true</hospitalizace>
+      <predpis>Omeprazol</predpis>
+    </zaznam>
+  </zaznamy>
+</pacient>
+
+  </oddeleni>
+</klinika>

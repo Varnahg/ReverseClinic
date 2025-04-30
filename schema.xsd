@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- 1. pattern -->
+  <xs:simpleType name="kodOddeleniType">
+    <xs:annotation>
+      <xs:documentation>Kod oddeleni musi byt presne 3 velka pismena (napr. INT)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- 2. enumeration -->
+  <xs:simpleType name="cisloPojistovnyType">
+    <xs:annotation>
+      <xs:documentation>Cislo pojistovny – povolene hodnoty: 111, 205, 207, 213</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="111"/>
+      <xs:enumeration value="205"/>
+      <xs:enumeration value="207"/>
+      <xs:enumeration value="213"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- 3. minLength -->
+  <xs:simpleType name="rodneCisloType">
+    <xs:annotation>
+      <xs:documentation>Rodne cislo musi mit alespon 11 znaku (napr. 850101/1234)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="11"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- 4. maxInclusive -->
+  <xs:simpleType name="kapacitaType">
+    <xs:annotation>
+      <xs:documentation>Maximalni kapacita luzek je 100</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer">
+      <xs:maxInclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- 5. whiteSpace -->
+  <xs:simpleType name="telefonCisty">
+    <xs:annotation>
+      <xs:documentation>Telefonni cislo bude automaticky orezano od nadbytecnych mezer</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:whiteSpace value="collapse"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Struktura kliniky -->
+  <xs:element name="klinika">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="oddeleni">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nazevOddeleni" type="xs:string"/>
+              <xs:element name="adresaOddeleni" type="xs:string"/>
+              <xs:element name="kapacitaLuzek" type="kapacitaType"/>
+              <xs:element name="lekar" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="titul" type="xs:string"/>
+                    <xs:element name="jmeno" type="xs:string"/>
+                    <xs:element name="prijmeni" type="xs:string"/>
+                    <xs:element name="specializace" type="xs:string"/>
+                    <xs:element name="email" type="xs:string"/>
+                    <xs:element name="telefon" type="telefonCisty"/>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required"/>
+                  <xs:attribute name="smluvni" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="pacient" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="jmeno" type="xs:string"/>
+                    <xs:element name="prijmeni" type="xs:string"/>
+                    <xs:element name="rodneCislo" type="rodneCisloType"/>
+                    <xs:element name="datumNarozeni" type="xs:date"/>
+                    <xs:element name="pohlavi" type="xs:string"/>
+                    <xs:element name="pojistovna" type="cisloPojistovnyType"/>
+                    <xs:element name="statniPrislusnost" type="xs:string"/>
+                    <xs:element name="telefon" type="telefonCisty"/>
+                    <xs:element name="email" type="xs:string"/>
+                    <xs:element name="adresa" type="xs:string"/>
+                    <xs:element name="kontaktniOsoba" type="xs:string"/>
+                    <xs:element name="alergie" type="xs:string"/>
+                    <xs:element name="zaznamy">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="zaznam" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="typ" type="xs:string"/>
+                                <xs:element name="datum" type="xs:date"/>
+                                <xs:element name="cas" type="xs:string"/>
+                                <xs:element name="diagnoza" type="xs:string"/>
+                                <xs:element name="ukon" type="xs:string"/>
+                                <xs:element name="lekarId" type="xs:string"/>
+                                <xs:element name="oddeleniKod" type="kodOddeleniType"/>
+                                <xs:element name="poznamka" type="xs:string"/>
+                                <xs:element name="hospitalizace" type="xs:boolean"/>
+                                <xs:element name="predpis" type="xs:string"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required"/>
+                  <xs:attribute name="stav" type="xs:string"/>
+                  <xs:attribute name="rizikovy" type="xs:string"/>
+                  <xs:attribute name="pojisten" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="kod" type="kodOddeleniType"/>
+            <xs:attribute name="typ" type="xs:string"/>
+            <xs:attribute name="patro" type="xs:string"/>
+            <xs:attribute name="otevreno" type="xs:string"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

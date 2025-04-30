@@ -1,0 +1,111 @@
+
+    {
+      "klinika": {
+        "oddeleni": {
+          "nazev": "Interna",
+          "pacienti": [
+            
+              {
+                "id": "P001",
+                "jmeno": "Jan",
+                "prijmeni": "Novak",
+                "stav": "aktivni",
+                "rizikovy": "false",
+                "zaznamy": [
+                  
+                    {
+                      "typ": "navsteva",
+                      "datum": "2025-03-01",
+                      "diagnoza": "J45",
+                      "info": 
+                      "Prvni kontakt s pacientem",
+                      "poznatka":
+                      
+                    }
+                ]
+              },
+              {
+                "id": "P002",
+                "jmeno": "Petra",
+                "prijmeni": "Dvorakova",
+                "stav": "propusten",
+                "rizikovy": "false",
+                "zaznamy": [
+                  
+                    {
+                      "typ": "kontrola",
+                      "datum": "2025-03-05",
+                      "diagnoza": "Z09",
+                      "info": 
+                      "Opakovana navsteva",
+                      "poznatka":
+                      
+                    }
+                ]
+              },
+              {
+                "id": "P003",
+                "jmeno": "Lukas",
+                "prijmeni": "Krejci",
+                "stav": "hospitalizovan",
+                "rizikovy": "true",
+                "zaznamy": [
+                  
+                    {
+                      "typ": "vysetreni",
+                      "datum": "2025-03-10",
+                      "diagnoza": "R51",
+                      "info": 
+                      "Jiny typ zaznamu",
+                      "poznatka":
+                      
+                        "Pacient byl hospitalizovan"
+                      
+                    }
+                ]
+              },
+              {
+                "id": "P004",
+                "jmeno": "Martina",
+                "prijmeni": "Benesova",
+                "stav": "aktivni",
+                "rizikovy": "true",
+                "zaznamy": [
+                  
+                    {
+                      "typ": "konzultace",
+                      "datum": "2025-03-12",
+                      "diagnoza": "E66",
+                      "info": 
+                      "Jiny typ zaznamu",
+                      "poznatka":
+                      
+                    }
+                ]
+              },
+              {
+                "id": "P005",
+                "jmeno": "Tomas",
+                "prijmeni": "Svoboda",
+                "stav": "ceka",
+                "rizikovy": "false",
+                "zaznamy": [
+                  
+                    {
+                      "typ": "navsteva",
+                      "datum": "2025-03-20",
+                      "diagnoza": "K21",
+                      "info": 
+                      "Prvni kontakt s pacientem",
+                      "poznatka":
+                      
+                        "Pacient byl hospitalizovan"
+                      
+                    }
+                ]
+              }
+          ]
+        }
+      }
+    }
+  
